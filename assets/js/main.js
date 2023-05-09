@@ -14,6 +14,8 @@ tabs.forEach(tab =>{
             t.classList.remove('filter-tab-active')
         })
         tab.classList.add('filter-tab-active')
+
+        
     })
 })
 

@@ -245,7 +245,7 @@ body.dark-theme {
   padding: .375rem;
   border-radius: .75rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   column-gap: .5rem;
 }
 
@@ -313,6 +313,54 @@ body.dark-theme {
 }
 
 .projects__card:hover .projects__modal {
+  bottom: 0;
+}
+
+.certification__card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.certification__card img {
+  width: 100%;
+  height: 100%;
+}
+
+.certification__modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -100%;
+  left: 0;
+  background: linear-gradient(180deg, 
+              hsla(var(--hue), 24%, 40%, .3) 0%, 
+              hsla(var(--hue), 24%, 4%, 1) 95%);
+  display: grid;
+  align-items: flex-end;
+  padding: 1.5rem 1.25rem;
+  transition: .3s;
+}
+
+.certification__subtitle, 
+.certification__title {
+  color: #fff;
+}
+
+.certification__subtitle {
+  font-size: var(--smaller-font-size);
+}
+
+.certification__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: .75rem;
+}
+
+.certification__button {
+  padding: .5rem;
+}
+
+.certification__card:hover .certification__modal {
   bottom: 0;
 }
 
@@ -408,14 +456,20 @@ body.dark-theme {
     justify-content: center;
   }
 
+  .certification__content {
+    grid-template-columns: 332px;
+    justify-content: center;
+  }
+
   .filters__content {
-    width: 332px;
+    width: 432px;
     margin: 3rem auto;
   }
 }
 
 @media screen and (min-width: 776px) {
   .projects__content,
+  .certification__content,
   .skills__content {
     grid-template-columns: repeat(2, 332px);
   }
@@ -473,9 +527,30 @@ body.dark-theme {
     padding: 1.5rem;
   }
 
+  .certification__content {
+    gap: 2rem 3rem;
+  }
+  .certification__modal {
+    padding: 1.5rem;
+  }
+
   .skills__title {
     font-size: var(--normal-font-size);
     margin-bottom: 2.5rem;
   }
 
+  .footer__copy {
+    margin: 4.5rem 0 2.5rem;
+  }
+  
 }
+
+.footer__copy {
+  display: block;
+  margin: 2.5rem 0 2rem;
+  text-align: center;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+

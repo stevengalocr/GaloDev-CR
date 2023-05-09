@@ -24,6 +24,10 @@
         grid-template-columns: 332px;
         justify-content: center;
     }
+    .certification__content{
+        grid-template-columns: 332px;
+        justify-content: center;
+    }
     .filters__content{
         width: 332px;
         margin: 3rem auto;
@@ -32,6 +36,7 @@
 
 @media screen and (min-width: 776px){
     .projects__content,
+    .certification__content,
     .skills__content{
         grid-template-columns: repeat(2, 332px);
     }
@@ -84,6 +89,15 @@
     }
 
     .projects{
+        &__content{
+            gap: 2rem 3rem;
+        }
+        &__modal{
+            padding: 1.5rem;
+        }
+    }
+
+    .certification{
         &__content{
             gap: 2rem 3rem;
         }
