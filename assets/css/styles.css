@@ -66,12 +66,18 @@ img {
 
 .change-theme {
   position: absolute;
-  top: 1.5rem;
-  right: 0;
   font-size: 1.25rem;
-  color: var(--title-color);
   cursor: pointer;
-  transition: .3s;
+  top: 2.5rem;
+  right: 1.5rem;
+}
+
+.change-language {
+  position: absolute;
+  font-size: 1.25rem;
+  cursor: pointer;
+  top: 5rem;
+  right: 1rem;
 }
 
 .change-theme:hover {
@@ -487,16 +493,20 @@ body.dark-theme {
   }
 
   .change-theme {
+    position: absolute;
+    font-size: 1.25rem;
+    cursor: pointer;
     top: 2.5rem;
     right: 2.5rem;
   }
 
   .change-language {
     position: absolute;
-    top: 2.5rem;
-    left: 2.5rem;
+    font-size: 1.25rem;
     cursor: pointer;
-  } 
+    top: 5rem;
+    right: 2rem;
+  }
 
   .profile {
     padding-top: 4rem;
